@@ -236,6 +236,8 @@ class NeedlemanWunsch:
         #self.direction_matrix = direction_matrix
 
         print(self._align_matrix)
+        print(self._gapB_matrix)
+        print(self._gapA_matrix)
         return self._backtrace()
 
     def _backtrace(self) -> Tuple[float, str, str]:
