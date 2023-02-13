@@ -17,7 +17,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
-dependencies = ["pytest", "numpy", "Tuple"]
+dependencies = ["pytest", "numpy"]
 
 [project.urls]
 Home = "https://github.com/yaenchen/HW5-NW"
