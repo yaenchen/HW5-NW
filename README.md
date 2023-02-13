@@ -1,4 +1,4 @@
-![BuildStatus] (https://github.com/yaenchen/HW5-NW/actions/workflows/test.yml/badge.svg?event=push)
+"![BuildStatus] (https://github.com/yaenchen/HW5-NW/actions/workflows/test.yml/badge.svg?event=push)"
 
 # Project 4
 Needleman Wunsch Algorithm
