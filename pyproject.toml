@@ -11,7 +11,7 @@ pythonpath = [
 ]
 
 [project]
-name = "mst"
+name = "align"
 authors = [{name = "Yaen Chen", email = "yaen.chen@ucsf.edu"}]
 readme = "README.md"
 license = {file = "LICENSE"}
