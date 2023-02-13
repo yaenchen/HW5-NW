@@ -20,4 +20,4 @@ dynamic = ["version", "description"]
 dependencies = ["pytest", "numpy", "Tuple"]
 
 [project.urls]
-Home = "https://github.com/sllienaa/HW5-NW"
+Home = "https://github.com/yaenchen/HW5-NW"
