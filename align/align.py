@@ -210,31 +210,6 @@ class NeedlemanWunsch:
                 self._back_A[row, column] = a_options.index(max_a)
                 self._back_B[row, column] = b_options.index(max_b)
 
-                # # check if match, mismatch, or gap
-                # new_score = self._check_match(self._seqB[row - 1], self._seqA[column - 1])
-                # # if match or mismatch, add the score from the BLOSUM matrix
-                # # if gap, add gap score
-                # if new_score == 'GAP':
-                #     new_score = self.gap_open
-                # # calculate top and left scores, which both represent gaps
-                # top = scores[row - 1][column] + self.gap_open
-                # left = scores[row][column - 1] + self.gap_open
-                # # calculate diagonal top left score based on if it is a match, mismatch, or gap
-                # top_left = scores[row - 1][column - 1] + new_score
-                #
-                # # add the maximum score to the scores matrix
-                # scores[row][column] = max(top, left, top_left)
-                # # add the specified direction in the direction matrix, which will be used to backtrack
-                # if max(top, left, top_left) == top:
-                #     direction_matrix[row][column] = 1
-                # elif max(top, left, top_left) == left:
-                #     direction_matrix[row][column] = 2
-                # elif max(top, left, top_left) == top_left:
-                #     direction_matrix[row][column] = 3
-
-        #self.score_matrix = scores
-        #self.direction_matrix = direction_matrix
-
         return self._backtrace()
 
     def _backtrace(self) -> Tuple[float, str, str]:
@@ -298,29 +273,7 @@ class NeedlemanWunsch:
         self.seqA_align = self.seqA_align[::-1]
         self.seqB_align = self.seqB_align[::-1]
 
-        # # calculate final alignment score
-        # alignment_index = 0
-        # # while the index is less than the length of the aligned sequence
-        # while alignment_index < len(self.seqB_align):
-        #     # if the value at that index is a gap
-        #     if self._check_match(self.seqA_align[alignment_index], self.seqB_align[alignment_index]) == 'GAP':
-        #         # if it is a single gap, add opening gap penalty score
-        #         self.alignment_score += self.gap_open
-        #         alignment_index += 1
-        #         # if the sequence ends on a gap, stop
-        #         if alignment_index >= len(self.seqB_align):
-        #             break
-        #         # while the gap continues
-        #         while self.seqB_align[alignment_index] == '-':
-        #             # add the extension penalty score
-        #             self.alignment_score += self.gap_extend
-        #             alignment_index += 1
-        #     # if there was no gap
-        #     else:
-        #         # add the match/mismatch score from the substitution matrix
-        #         self.alignment_score += self._check_match(self.seqA_align[alignment_index], self.seqB_align[alignment_index])
-        #         alignment_index += 1
-        #
+
         return (self.alignment_score, self.seqA_align, self.seqB_align)
 
 
